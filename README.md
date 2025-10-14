@@ -104,8 +104,8 @@ Este projeto demonstra como aplico **POO avançada e princípios de design** em 
 
 ## 📌 Contato
 
-* GitHub: [https://github.com/seuusuario](https://github.com/VictorGabrielQS)
-* LinkedIn: [https://linkedin.com/in/seuusuario](www.linkedin.com/in/victor-gabrielqs)
+* GitHub: [https://github.com/VictorGabrielQS](https://github.com/VictorGabrielQS)
+* LinkedIn: [https://linkedin.com/in/VictorGabrielQS](https://www.linkedin.com/in/victor-gabrielqs)
 
 ---
 
