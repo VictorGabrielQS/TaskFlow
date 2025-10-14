@@ -1,7 +1,5 @@
 # 📝 TaskFlow — Gerenciador de Tarefas Inteligente
 
-### Olá, seja bem-vindo(a) ao meu portfólio! 👋
-
 Este projeto é uma **aplicação Java Spring Boot** que desenvolvi para demonstrar **POO avançada, princípios de design e boas práticas de código**.
 O objetivo é mostrar como estruturo uma aplicação de forma profissional, seguindo **SOLID, camadas separadas (Controller, Service, Repository), DTOs, mapeamento e testes de lógica de negócio**.
 
