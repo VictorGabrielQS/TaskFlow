@@ -1,4 +1,4 @@
-package VictorCode.TaskFlow.model.enums;
+package VictorCode.TaskFlow.infrastructure.model.enums;
 
 public enum Prioridade {
     BAIXA,

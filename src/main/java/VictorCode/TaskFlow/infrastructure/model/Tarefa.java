@@ -1,9 +1,8 @@
-package VictorCode.TaskFlow.model;
+package VictorCode.TaskFlow.infrastructure.model;
 
-import VictorCode.TaskFlow.model.enums.Prioridade;
-import VictorCode.TaskFlow.model.enums.Status;
+import VictorCode.TaskFlow.infrastructure.model.enums.Prioridade;
+import VictorCode.TaskFlow.infrastructure.model.enums.Status;
 import jakarta.persistence.*;
-import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
 import lombok.*;
 

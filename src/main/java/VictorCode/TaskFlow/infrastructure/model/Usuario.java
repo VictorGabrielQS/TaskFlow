@@ -1,6 +1,6 @@
-package VictorCode.TaskFlow.model;
+package VictorCode.TaskFlow.infrastructure.model;
 
-import VictorCode.TaskFlow.model.enums.Status;
+import VictorCode.TaskFlow.infrastructure.model.enums.Status;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;

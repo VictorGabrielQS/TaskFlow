@@ -1,7 +1,7 @@
-package VictorCode.TaskFlow.DTO;
+package VictorCode.TaskFlow.business.DTO;
 
-import VictorCode.TaskFlow.model.enums.Prioridade;
-import VictorCode.TaskFlow.model.enums.Status;
+import VictorCode.TaskFlow.infrastructure.model.enums.Prioridade;
+import VictorCode.TaskFlow.infrastructure.model.enums.Status;
 import lombok.Builder;
 
 import java.time.LocalDate;

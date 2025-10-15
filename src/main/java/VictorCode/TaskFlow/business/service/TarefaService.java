@@ -1,13 +1,14 @@
-package VictorCode.TaskFlow.service;
+package VictorCode.TaskFlow.business.service;
 
-import VictorCode.TaskFlow.DTO.TarefaRequestDTO;
-import VictorCode.TaskFlow.DTO.TarefaResponseDTO;
-import VictorCode.TaskFlow.model.Tarefa;
-import VictorCode.TaskFlow.model.Usuario;
-import VictorCode.TaskFlow.model.enums.Status;
-import VictorCode.TaskFlow.repository.TarefaRepository;
+import VictorCode.TaskFlow.business.DTO.TarefaRequestDTO;
+import VictorCode.TaskFlow.business.DTO.TarefaResponseDTO;
+import VictorCode.TaskFlow.infrastructure.model.Tarefa;
+import VictorCode.TaskFlow.infrastructure.model.Usuario;
+import VictorCode.TaskFlow.infrastructure.model.enums.Status;
+import VictorCode.TaskFlow.infrastructure.repository.TarefaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 
 import java.util.Optional;
 
@@ -77,7 +78,46 @@ public class TarefaService {
 
     // Metodo Calcular Progresso :
     public Optional<String> calcularProgresso(){
-        return  Optional.ofNullable(usuario.getTarefas()).
+
+        return Optional.ofNullable(usuario.getTarefas())
+                .filter(list -> !list.isEmpty()) // Se estiver vazia, retorna Optional.empty()
+
+                .map(listaTarefas -> {
+
+                   long pendentes = listaTarefas.stream()
+                           .filter(tarefa -> tarefa.getStatus().equals(Status.PENDENTE))
+                           .count();
+
+
+                    long atrasadas = listaTarefas.stream()
+                            .filter(tarefa -> tarefa.getStatus().equals(Status.ATRASADA))
+                            .count();
+
+
+                    long concluidas = listaTarefas.stream()
+                            .filter(tarefa -> tarefa.getStatus().equals(Status.CONCLUIDA))
+                            .count();
+
+
+                    double total = listaTarefas.size();
+
+
+                    return String.format("""
+                        ===== Progresso =====
+                        Pendentes : %d (%.2f%%)
+                        Atrasadas : %d (%.2f%%)
+                        Concluídas : %d (%.2f%%)
+                        """,
+
+                            pendentes, (pendentes * 100.0) / total,
+                            atrasadas, (atrasadas * 100.0) / total,
+                            concluidas, (concluidas * 100.0) / total
+                    );
+                });
+
+
+
     }
+
 
 }

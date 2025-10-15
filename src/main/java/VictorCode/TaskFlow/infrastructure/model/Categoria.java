@@ -1,4 +1,4 @@
-package VictorCode.TaskFlow.model;
+package VictorCode.TaskFlow.infrastructure.model;
 
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
