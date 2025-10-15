@@ -11,7 +11,10 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 
-@Data
+@Entity
+@Table(name = "tarefas")
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder

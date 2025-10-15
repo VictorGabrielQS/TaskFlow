@@ -10,5 +10,4 @@ public record TarefaRequestDTO(
         String descricao,
         LocalDate dataCriacao,
         Prioridade prioridade
-
 ){}
